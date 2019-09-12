@@ -11,3 +11,7 @@
 
 var gifs = ["Stephen Curry", "Eli Manning", "Dwayne Johnson"];
 
+$(document).ready(function (){
+    
+
+})
