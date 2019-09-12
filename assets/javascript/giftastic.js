@@ -11,7 +11,15 @@
 
 var gifs = ["Stephen Curry", "Eli Manning", "Dwayne Johnson"];
 
-$(document).ready(function (){
-    
+$(document).ready(function () {
+    function displayGif() {
+        $("button").on("click", function () {
+            var gif = $(this).attr("data-person");
+            var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+                gif + "&api_key=wslWpWhssAgYDK6zVXacBDsacT47flr4&limit=10";
+                
+
+        })
+    }
 
 })
