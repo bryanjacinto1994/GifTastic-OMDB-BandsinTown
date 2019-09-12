@@ -17,7 +17,16 @@ $(document).ready(function () {
             var gif = $(this).attr("data-person");
             var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
                 gif + "&api_key=wslWpWhssAgYDK6zVXacBDsacT47flr4&limit=10";
-                
+
+            $.ajax({
+                url: queryURL,
+                method: "GET"
+            })
+            .then(function(response){
+                console.log(response);
+                var results = response.data;
+                $("#gifs-view").empty();
+            })
 
         })
     }
