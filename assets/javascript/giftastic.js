@@ -9,3 +9,5 @@
 //Create a renderButtons function so buttons will appear when the name is searched.
 //Create an click function that will display the gifs once the button is clicked.
 
+var gifs = ["Stephen Curry", "Eli Manning", "Dwayne Johnson"];
+
