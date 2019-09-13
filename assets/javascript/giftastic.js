@@ -74,5 +74,12 @@ $(document).ready(function () {
             $("#gif-view").append(newButton);
         }
     }
+    $("#add-gif").on("click", function(event){
+        event.preventDefault();
 
-})
+        var giphy = $("#gif-input").val().trim();
+        gifs.push(giphy);
+        renderButtons();
+    })
+
+});
