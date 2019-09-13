@@ -18,7 +18,6 @@ https://github.com/bryanjacinto1994/GifTastic-OMDB-BandsinTown/
 * JavaScript - A scripting language that uses curly-bracket syntax, first class functions and object-oriented.
 * jQuery - A JavaScript library that simplifys to manipulate HTML DOM.
 * API - Application Programming Interface that simplifys the client-side software between a client and a server.
-* JSON -
 * HTML - Used to create elements on the DOM.
 * CSS - Styles the html elements on page. 
 * Git - Version control system to track changes to source code.
