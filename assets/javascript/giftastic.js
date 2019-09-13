@@ -22,34 +22,51 @@ $(document).ready(function () {
                 url: queryURL,
                 method: "GET"
             })
-            .then(function(response){
-                console.log(response);
-                console.log(response.data);
-                var responseData = response.data;
-                $("#gifs-view").empty();
+                .then(function (response) {
+                    console.log(response);
+                    console.log(response.data);
+                    var responseData = response.data;
+                    $("#gifs-view").empty();
 
-                for (var i = 0; i < responseData.length; i++){
-                    var giphyDiv = $("<div>");
-                    var rating = responseData[i].rating;
-                    var p = $("<p>").text("Rated: " + rating);
-                    var giphyGifs = $("<img>");
-                    giphyGifs.attr("src", responseData[i].images.fixed_height_still.url);
-                    giphyGifs.attr("data-pause", responseData[i].images.fixed_height_still.url);
-                    giphyGifs.attr("data-play", responseData[i].images.fixed_height.url);
-                    giphyGifs.attr("data-state", "pause");
-                    giphyGifs.addClass("giphy");
+                    for (var i = 0; i < responseData.length; i++) {
+                        var giphyDiv = $("<div>");
+                        var rating = responseData[i].rating;
+                        var p = $("<p>").text("Rated: " + rating);
+                        var giphyGifs = $("<img>");
+                        giphyGifs.attr("src", responseData[i].images.fixed_height_still.url);
+                        giphyGifs.attr("data-pause", responseData[i].images.fixed_height_still.url);
+                        giphyGifs.attr("data-play", responseData[i].images.fixed_height.url);
+                        giphyGifs.attr("data-state", "pause");
+                        giphyGifs.addClass("giphy");
 
-                    giphyDiv.append(p);
-                    giphyDiv.append(giphyGifs);
+                        giphyDiv.append(p);
+                        giphyDiv.append(giphyGifs);
 
-                    $("#gifs-view").prepend(giphyDiv);
+                        $("#gifs-view").prepend(giphyDiv);
+                    };
+                });
 
+        });
+    };
 
+    $(document).on("click", ".giphy", function(){
+        var state = $(this).attr("data-state");
 
-                }
-            })
+        if (state === "pause") {
+            var animate = $(this).attr("data-play");
+            $(this).attr("src", animate);
+            $(this).attr("data-state", "play");
+        }
+        else{
+            $(this).attr("src", $(this).attr("data-pause"));
+            $(this).attr("data-state", "pause");
+        }
+    })
 
-        })
+    function renderButtons(){
+        $("#gif-view").empty();
+
+        
     }
 
 })
