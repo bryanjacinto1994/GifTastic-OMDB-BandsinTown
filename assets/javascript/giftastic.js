@@ -29,6 +29,9 @@ $(document).ready(function () {
 
                 for (var i = 0; i < results.length; i++){
                     var giphyDiv = $("<div>");
+                    var rating = results[i].rating;
+                    var p = $("<p>").text("Rated: " + rating);
+                    
                 }
             })
 
