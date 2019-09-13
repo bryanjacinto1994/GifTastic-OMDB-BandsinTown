@@ -40,3 +40,29 @@ function showMovie() {
         })
 
 }
+
+function renderButtons() {
+    $("#movie-view").empty();
+
+    for (var i = 0; i < movies.length; i++) {
+        var newButton = $("<button>");
+        newButton.addClass("movieButton");
+        newButton.attr("data-name", movies[i]);
+        newButton.text(movies[i]);
+        $("#movie-view").append(newButton);
+    }
+}
+
+
+
+$("#add-movie").on("click", function (event) {
+    event.preventDefault();
+
+    var movie = $("#movie-input").val().trim();
+    movies.push(movie);
+
+    renderButtons();
+});
+$(document).on("click", ".movieButton", showMovie);
+
+renderbuttons();
