@@ -1,6 +1,6 @@
 # GifTastic-OMDB-BandsinTown
 ### Links: 
-https://bryanjacinto1994.github.io/Trivia-Game/
+https://bryanjacinto1994.github.io/GifTastic-OMDB-BandsinTown/
 <br>
 https://github.com/bryanjacinto1994/Trivia-Game
 
