@@ -81,5 +81,6 @@ $(document).ready(function () {
         gifs.push(giphy);
         renderButtons();
     })
-
+    $(document).on("click", ".giphy", displayGif);
+    renderButtons();
 });
