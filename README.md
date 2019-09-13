@@ -57,11 +57,11 @@ giftastic.html :
                         Dropdown
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">GifTastic</a>
+                        <a class="dropdown-item" href="index.html">GifTastic</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">OMBD (Coming Soon)</a>
+                        <a class="dropdown-item" href="omdb.html">OMBD (Coming Soon)</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Bands in Town (Coming Soon)</a>
+                        <a class="dropdown-item" href="bandsintown.html">Bands in Town (Coming Soon)</a>
                     </div>
                 </li>
         </div>
