@@ -26,6 +26,10 @@ $(document).ready(function () {
                 console.log(response);
                 var results = response.data;
                 $("#gifs-view").empty();
+
+                for (var i = 0; i < results.length; i++){
+                    var giphyDiv = $("<div>");
+                }
             })
 
         })
