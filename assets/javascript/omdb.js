@@ -1,8 +1,10 @@
-var movies = ["Batman", "Little Manhattan", "August Rush", "Toy Story"];
+var movies = [];
+$(document).ready(function (){
+
 
 function showMovie() {
     var movie = $(this).attr("data-name");
-    var queryURL = "https://www.omdbapi.com/?=" + movie + "&y=&plot=short&apikey=4445d410";
+    var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=4445d410";
 
     $.ajax({
         url: queryURL,
@@ -20,7 +22,7 @@ function showMovie() {
 
             $("#movies-view").empty();
 
-            var p = $("<h2>").text("Title: " + title);
+            var p = $("<h2>").text(title);
             movieDiv.append(p);
 
             var rated = $("<p>").text("Rated: " + rating);
@@ -35,7 +37,7 @@ function showMovie() {
             var picture = $("<img>").attr("src", image);
             movieDiv.append(picture);
 
-            $("#movies-view").append(movieDiv);
+            $("#movies-view").prepend(movieDiv);
 
         })
 
@@ -66,3 +68,5 @@ $("#add-movie").on("click", function (event) {
 $(document).on("click", ".movieButton", showMovie);
 
 renderbuttons();
+
+});
