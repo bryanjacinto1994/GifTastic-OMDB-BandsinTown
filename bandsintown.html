@@ -5,16 +5,16 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>OMDB</title>
+    <title>GifTastic</title>
 </head>
 
 <body>
     <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#" id="Title">OMDB</a>
+        <a class="navbar-brand" href="#" id="Title">Bands in Town</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -25,16 +25,16 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Dropdown
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">GifTastic</a>
+                        <a class="dropdown-item" href="index.html">GifTastic</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">OMBD</a>
+                        <a class="dropdown-item" href="omdb.html">OMBD</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Bands in Town (Coming Soon)</a>
+                        <a class="dropdown-item" href="bandsintown.html">Bands in Town (Coming Soon)</a>
                     </div>
                 </li>
         </div>
@@ -45,7 +45,7 @@
             style="border-radius: 100px; width: 100%; color: whitesmoke; margin: 0 auto;">
             <div class="container">
                 <h1 class="display-4" style="text-align: center; font-size: 60px; margin: 0 auto;" id="Title">
-                    Open Movie Data-Base
+                    BandsinTown
                 </h1>
             </div>
         </div>
@@ -54,22 +54,20 @@
     <div class="card text-white bg-dark mb-3" style="max-width: 40rem; margin: 0 auto; border-radius: 40px;">
         <div class="card-header" id="Title" style="text-align:center; font-size:24px;">Search</div>
         <div class="card-body">
-            <label for="movie-input">Search For A Movie</label>
-            <input class="form-control form-control-lg" type="text" id="movie-input" placeholder="Search Here">
+            <label for="band-input">Search For A Band</label>
+            <input class="form-control form-control-lg" type="text" id="band-input" placeholder="Search Here">
             <br>
-            <input id="add-movie" type="submit" value="Search">
+            <input id="add-band" type="submit" value="Search">
             <br><br>
-            <div id="movie-view"></div>
+            <div id="band-view"></div>
         </div>
     </div>
     <br>
-    <span class="d-flex flex-row flex-wrap my-flex-container justify-content-center" id="movies-view" style="color: white; height: 550px; border-radius: 100px; margin: 0 auto;"></span>
-    <br><br><br><br><br>
-    
-    <div class="fixed-bottom bg-dark" style="text-align: center; color:white;">
+    <span class="d-flex flex-row flex-wrap my-flex-container justify-content-center" id="bands-view" style="color: white; height: 550px; border-radius: 100px; margin: 0 auto;"></span>
+    <br>
+    <div class="fixed-bottom bg-dark" style="text-align: center; color: white;">
        | Bryan Jacinto © | GifTastic | OMDB | Bands in Town |
     </div>
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -81,7 +79,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../javascript/omdb.js"></script>
+    <script type="text/javascript" src="assets/javascript/giftastic.js"></script>
     </script>
 </body>
 
