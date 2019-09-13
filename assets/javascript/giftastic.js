@@ -31,7 +31,7 @@ $(document).ready(function () {
                     var giphyDiv = $("<div>");
                     var rating = results[i].rating;
                     var p = $("<p>").text("Rated: " + rating);
-                    
+                    var giphyGifs = $("<img>");
                 }
             })
 
