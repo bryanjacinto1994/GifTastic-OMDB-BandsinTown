@@ -24,14 +24,28 @@ $(document).ready(function () {
             })
             .then(function(response){
                 console.log(response);
-                var results = response.data;
+                console.log(response.data);
+                var responseData = response.data;
                 $("#gifs-view").empty();
 
-                for (var i = 0; i < results.length; i++){
+                for (var i = 0; i < responseData.length; i++){
                     var giphyDiv = $("<div>");
-                    var rating = results[i].rating;
+                    var rating = responseData[i].rating;
                     var p = $("<p>").text("Rated: " + rating);
                     var giphyGifs = $("<img>");
+                    giphyGifs.attr("src", responseData[i].images.fixed_height_still.url);
+                    giphyGifs.attr("data-pause", responseData[i].images.fixed_height_still.url);
+                    giphyGifs.attr("data-play", responseData[i].images.fixed_height.url);
+                    giphyGifs.attr("data-state", "pause");
+                    giphyGifs.addClass("giphy");
+
+                    giphyDiv.append(p);
+                    giphyDiv.append(giphyGifs);
+
+                    $("#gifs-view").prepend(giphyDiv);
+
+
+
                 }
             })
 
