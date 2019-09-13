@@ -49,7 +49,7 @@ $(document).ready(function () {
         });
     };
 
-    $(document).on("click", ".giphy", function(){
+    $(document).on("click", ".giphy", function () {
         var state = $(this).attr("data-state");
 
         if (state === "pause") {
@@ -57,16 +57,22 @@ $(document).ready(function () {
             $(this).attr("src", animate);
             $(this).attr("data-state", "play");
         }
-        else{
+        else {
             $(this).attr("src", $(this).attr("data-pause"));
             $(this).attr("data-state", "pause");
         }
     })
 
-    function renderButtons(){
+    function renderButtons() {
         $("#gif-view").empty();
 
-        
+        for (var i = 0; i < gifs.length; i++) {
+            var newButton = $("<button>");
+            newButton.addClass("giphy");
+            newButton.attr("data-person", gifs[i]);
+            newButton.text(gifs[i]);
+            $("#gif-view").append(newButton);
+        }
     }
 
 })
